@@ -12,7 +12,7 @@ def build_corpus(split, make_vocab=True, data_dir="./ResumeNER"):
         word_list = []
         tag_list = []
         for line in f:
-            if line != '\n':
+            if line != '\r\n': # 修改
                 word, tag = line.strip('\n').split()
                 word_list.append(word)
                 tag_list.append(tag)
